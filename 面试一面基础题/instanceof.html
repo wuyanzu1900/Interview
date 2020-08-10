@@ -1,0 +1,17 @@
+<script>
+    let r = 'aaaa';
+    let obj = {
+        [r]:123,
+        'r':456
+    }
+    // 元编程:对编程语言的再编程
+    class myArr{
+        static a = 1;
+        static [Symbol.hasInstance](){
+            return false;
+        }
+    }
+    let arr = new myArr();
+    console.log(myArr[Symbol.hasInstance])
+    console.log(arr instanceof myArr);
+</script>
