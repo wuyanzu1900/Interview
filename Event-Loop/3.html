@@ -1,0 +1,18 @@
+<script>
+    console.log(1) //第一步
+
+    setTimeout(function() {
+        console.log(2) //第六步
+    })
+
+    new Promise(function(resolve) {
+        console.log(3) //第二步
+        resolve()
+    }).then(function() {
+        console.log(4) //第四步
+    }).then(function() {
+        console.log(5) //第五步
+    })
+
+    console.log(6) //第三步
+</script>

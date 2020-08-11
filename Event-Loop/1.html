@@ -1,0 +1,29 @@
+<script>
+    // 宏任务队列:[setTimeout,setTimeout]
+    // 微任务队列:[p.then1]
+    setTimeout(() => {
+        console.log(1) //第四步 
+        Promise.resolve(6).then(console.log)
+    })
+    new Promise((resolve, reject) => { //生成promise是同步的
+            console.log(2) //第一步
+            resolve(3)
+        })
+        .then(
+            r => {
+                console.log(r) //第三步
+                setTimeout(() => {
+                    console.log(5)
+                })
+                return undefined
+
+            }
+
+        )
+        .then(r => {
+            console.log(r) //第四步
+        })
+        //如果有两个then的调用，下一个then是上一个then的返回值，链式调用，只有上一个then结束下一个then才会执行
+        // 因此上一个then结束之后必须有一个返回值
+    console.log(4) //第二步
+</script>
