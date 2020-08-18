@@ -48,7 +48,15 @@ c@0.2.0
         function compare(a, b) {
             const versionA = getVersion(a).split('.');
             const versionB = getVersion(b).split('.');
-
+            for (let i = 0; i < 3; i++) {
+                if (versionA[i] > versionB[i])
+                    return a;
+                else if (versionA[i] === versionB[i])
+                    continue;
+                else return b
+            }
+            return a
         }
+
     }
 </script>
