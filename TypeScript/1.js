@@ -7,3 +7,4 @@ getUserInfo()
 getUserInfo({name:'haha'})
 getUserInfo({name:'haha',height:1.66})
 // 利用返回值
+// readme
