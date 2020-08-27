@@ -1,0 +1,23 @@
+<script>
+    function limitRunTask(tasks, limit) {
+        return new Promise((resolve, reject) => {
+            let finish = 0,
+                res = []
+            let index = 0,
+                running = 0
+
+            function run() {
+                while (running < limit) {
+                    const p = tasks[index]()
+                    p.then(r => {
+                        finish++
+                        running--
+                        run()
+                    })
+                    index++
+                    running++
+                }
+            }
+        })
+    }
+</script>
