@@ -9,7 +9,7 @@
 // 数量 size
 // 是否为空 isEmpty
 // 清空 clear
-// toString 输出
+// toString 输出 
 var arr = [];
 function popstack(arr1) {
     if (arr1 == null) {
