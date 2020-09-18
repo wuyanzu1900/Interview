@@ -17,6 +17,7 @@ function run(){
         let fn = mids[index]
         // 调用next的时候+1
         if(!fn)return
+        // (ctx,next) => { await next()}
         fn({},()=>{
             // 调用next时
             index++;
