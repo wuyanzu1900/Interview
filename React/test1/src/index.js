@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Test from './Test1'
+// import Computer from './add-sub';
+import Show from './common/Show'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Test/>
+    <Show/>
   </React.StrictMode>,
   document.getElementById('root')
 );
