@@ -1,0 +1,17 @@
+<script>
+    let stack1, stack2 = []
+
+    function push() {
+        while (stack2.length !== 0) {
+            stack1.push(stack2.pop())
+        }
+        stack1.push(ele)
+    }
+
+    function pop() {
+        while (stack1.length !== 0) {
+            stack2.pop(stack1.pop())
+        }
+        return stack2.pop()
+    }
+</script>
